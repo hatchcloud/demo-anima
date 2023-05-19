@@ -35,7 +35,32 @@ function pagina_lista() {
     });
   });
 
+  const sectionHero = document.getElementById('hero-section');
+  const circle = document.getElementById('circle');
+
+  sectionHero.addEventListener('mouseenter', () => {
+    document.addEventListener('mousemove', moveCircle);
+    circle.style.display = 'block';
+    console.log('entre');
+  });
+
+  sectionHero.addEventListener('mouseleave', () => {
+    document.removeEventListener('mousemove', moveCircle);
+    circle.style.display = 'none';
+    console.log('sali');
+  });
+
+  function moveCircle(event) {
+    const x = event.clientX - circle.offsetWidth / 2;
+    const y = event.clientY - circle.offsetHeight / 2;
+    circle.style.left = x + 'px';
+    circle.style.top = y + 'px';
+  }
 }
+
+  
+
+
 
 
 $(window).scroll(function() {

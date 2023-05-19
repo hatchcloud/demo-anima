@@ -13,6 +13,7 @@
     <title>Proyecto</title>
 </head>
 <body>
+<div id="hero-section">
   <header id="navbar" class="container hero mt-80 flex space-between header align-center animate__animated animate__fadeIn navbar">
     <svg class="logo-monge" width="170" height="75" viewBox="0 0 666 292" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_473_6763)">
@@ -44,9 +45,11 @@
       <img src="./img/menu.svg" alt="menu" class="animate__animated animate__fadeIn animate__delay-2s">
     </div>
   </header>
-  <section  class="w-100 flex justify-center">
-    
+
+  <section   class="w-100 flex justify-center altura">
+    <div id="circle" class="circle animate__animated animate__fadeIn animate__delay-2s"></div>
     <div class=" container hero flex column space-hero hero-bg">
+      
       <div class="texto-md flex  overflow">
         <img id="texto-md" src="./img/texto03.svg" alt="Somos más que una tienda">
       </div>
@@ -55,12 +58,59 @@
       </div>
       <div class="flex justify-end mt-1"><img src="./img/down.svg" alt="menu" class="animate__animated animate__fadeIn animate__delay-2s"></div>
     </div>
-    
     <div class="p-a h-100 w-100 bg-animated">
-  
-
     </div>
     
+  </section>
+
+</div>
+
+<section class=" flex column carrusel-sec">
+  <div class="gallery overflow">
+    <div id="carrusel" class="gap flex carousel">
+      <div class="product">
+        <div class="hide-text display">
+          <p>Financiamiento para tu comodidad</p>
+        </div>
+       <img src="./img/videos/pexels-andrea-piacquadio-914931.jpg" loading="lazy" alt="">
+      </div>
+      <div class="product">
+        <div class="hide-text display">
+          <p>Capacitación líder en venta de electrodomésticos y muebles.</p>
+        </div>
+        <img src="./img/mama.png" loading="lazy" alt="">
+      </div>
+      <div class="product">
+        <div class="hide-text display">
+          <p>Importancia en programas Sociales</p>
+        </div>
+        <img src="./img/accesibilidad.png" loading="lazy" alt="">
+      </div>
+      <div class="product">
+        <div class="hide-text display">
+          <p>Oportunidades de crecimiento para nuestros colaboradores</p>
+        </div>
+        <img src="./img/videos/pexels-christina-morillo-1181263.jpg" loading="lazy" alt="">
+      </div>
+      <div class="product">
+        <div class="hide-text display">
+          <p>Servicio al cliente excepcional.</p>
+        </div>
+        <img src="./img/videos/pexels-cottonbro-studio-4569304.jpg" loading="lazy" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="container btn-galeria">
+    <a class="arrow-left"><img src="./img/arrow-left.svg" alt="arrow-left"></a>
+    <a class="arrow-right"><img src="./img/arrow-right.svg" alt="arrow-right"></a>  
+  </div>
+</section>
+ 
+  <section class="gallery-monge">
+    <div class=" container hero flex ">
+
+    </div>
+
   </section>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./js/jquery.js" charset="UTF-8"></script>
