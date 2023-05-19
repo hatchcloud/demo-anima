@@ -6,7 +6,8 @@
     --medium-gray: #8D8E8E;
     --light-gray: #dfdfdf;
     --gap: 30px;
-    --rojo-monge:#C61820;
+    --rojo-monge:#fd4766;
+    --acento-morado: #3646f5;
 }
 
 
@@ -19,7 +20,6 @@ body{
     color: var(--light-gray);
     background-color: var(--white);
     position: relative;
-    background-image: url(../img/hhhorizon.svg);
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
@@ -28,6 +28,13 @@ body{
 
 .flex{
     display: flex;
+}
+.grid{
+    display: grid;
+}
+
+.col-2{
+    grid-template-columns: 1fr 1fr;
 }
 .space-between{
     justify-content: space-between;
@@ -51,6 +58,8 @@ body{
     gap: 10px;
 }
 
+.monge-red { color: var(--rojo-monge);}
+
 .hidden{ visibility: hidden;}
 
 .uppercase{
@@ -70,7 +79,12 @@ body{
 .overflow{
     overflow: hidden;
 }
-
+.p-galleria{
+    letter-spacing: 9.5px;
+    text-transform: capitalize;
+    color: #4B4C4E;
+    margin-bottom: 20px;
+}
 .container{
     max-width: 1280px;
     width: 95%;
@@ -85,6 +99,10 @@ body{
 
 .mt-80{
     margin-top: 80px;
+}
+
+.py-80{
+    padding: 0 80px;
 }
 
 .texto-md{
@@ -117,7 +135,7 @@ body{
 }
 
 .space-hero{
-    margin-top: calc(var(--gap)*12);
+    margin-top: calc(var(--gap)*8);
 }
 
 .space-soluciones{
@@ -125,8 +143,12 @@ body{
     margin-bottom: calc(var(--gap)*7);
 }
 
-.logo-monge path{
+.logo-monge .normal {
     animation: 2.5s cubic-bezier(.25, 1, .30, 1) 1s cambiar-tamanio both;
+}
+
+.logo-monge .red{
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) 1s cambiar-color both;
 }
 .navbar{
     position: absolute;
@@ -147,7 +169,6 @@ body{
 }
 
 .gallery{
-   max-width: 1120px ;
    width: 100vw;
 }
 
@@ -176,6 +197,7 @@ body{
     overflow: hidden;
     transition: width 0.5s ease;
     position: relative;
+    border-radius: 6px;
 }
 
 .product:hover{
@@ -241,7 +263,7 @@ body{
 
 .bg-animated{
     
-    background-color: var(--principal);
+    background-color: var(--rojo-monge);
     height: 100vh;
     animation: 2s cubic-bezier(.25, 1, .30, 1) 1s wipe-out-up both;
     z-index: -1;
@@ -267,6 +289,21 @@ body{
     }
 }
 
+@keyframes cambiar-color {
+    from {
+        transform: scale(1);
+        fill: var(--light-gray); /* Color inicial */
+    }
+    to {
+        transform: scale(0.6);
+        fill: var(--rojo-monge); /* Color final */
+    }
+}
+
+
+
+
+
 
 @keyframes wipe-out-up {
     from {
@@ -289,15 +326,15 @@ body{
 
 .circle {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%; /* Hace que el elemento tenga forma de círculo */
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff; /* Color del texto */
     font-weight: bold;
-    background-color: #df0d0aea;
+    background-color: var(--acento-morado);
     mix-blend-mode: screen;
     z-index: 2;
     cursor: default;
@@ -324,4 +361,59 @@ video {
     height: 100%;
     object-position: center;
     object-fit: cover;
+}
+
+.quote{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #4B4C4E;
+}
+
+.texto{
+    width: 95%;
+    margin-right: 20px;
+}
+
+.dash{
+    display: block;
+    width: 4px !important;
+    height: 180px;
+    background-color: var(--acento-morado);
+}
+
+.dash-2{
+    display: block;
+    width: 4px !important;
+    height: 483px;
+    background-color: var(--acento-morado);
+    
+}
+
+.circulito{
+    width: 16px;
+    height: 16px;
+    background-color: var(--acento-morado);
+    border-radius: 20px;
+}
+
+.p-nosotros{
+    letter-spacing: 9.5px;
+    text-transform: capitalize;
+    color: #4B4C4E;
+}
+
+.comment {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--medium-gray);
+}
+
+.comment span {
+    color: var(--principal);
+}
+
+.abajo{
+    margin-top: 80px;
 }
