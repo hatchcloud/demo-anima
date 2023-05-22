@@ -322,6 +322,10 @@ body{
  width: 100%;
  display: flex;
  justify-content: center;
+ background-blend-mode: soft-light;
+    background-size: cover;
+   /* background-image: url(../img/Fondo.png);*/
+    background-position: top;
 }
 
 .circle {
@@ -354,6 +358,7 @@ body{
 }
 .altura{
     height: 100vh;
+    
 }
 
 video {
@@ -417,3 +422,15 @@ video {
 .abajo{
     margin-top: 80px;
 }
+
+
+
+.fade-in-content {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+
+  .fade-in-section {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
